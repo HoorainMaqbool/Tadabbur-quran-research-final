@@ -1,0 +1,1 @@
+export default function SourceStrip({sources=[],guard}){return <div className="source-strip"><div><span>Grounding</span><strong>{guard?.passed===false?'Insufficient evidence':'Approved Quran evidence'}</strong></div><div className="chips">{sources.slice(0,8).map((s,i)=><span key={i}>{typeof s==='string'?s:(s?.ayah_reference||s?.reference||'Source')}</span>)}</div></div>}
