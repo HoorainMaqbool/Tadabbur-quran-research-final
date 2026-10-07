@@ -69,7 +69,7 @@ The known working post-normalization contract is:
 
 Preserve the existing exact lookup/evidence/deep-dive logic.
 
-## 4. Personalized Learning Plan
+## 4. Personalized 
 
 Suggested production path:
 `/webhook/tadabbur/learning-plan`
@@ -88,14 +88,14 @@ The recent smoke test confirmed the normalized values work with:
 
 Preserve the existing range validation, quran-translation-final1 evidence guard, generation and output validation.
 
-## 5. Quiz
+## 5. 
 
 Suggested production path:
 `/webhook/tadabbur/quiz`
 
 One webhook can handle both quiz generation and answer submission because the existing quiz workflow already has generation/submission branching.
 
-Map every field your current Quiz workflow uses. At minimum preserve:
+Map every field your current  workflow uses. At minimum preserve:
 - `requested_feature` = `{{$json.body.requested_feature}}`
 - `action` = `{{$json.body.action}}`
 - `language` = `{{$json.body.language}}`
@@ -103,7 +103,7 @@ Map every field your current Quiz workflow uses. At minimum preserve:
 - `quiz_id` = `{{$json.body.quiz_id}}`
 - `answers` = `{{$json.body.answers}}`
 
-Do NOT expose the sealing secret. Keep the server-side `sealing_secret` in the existing n8n Quiz configuration.
+Do NOT expose the sealing secret. Keep the server-side `sealing_secret` in the existing n8n  configuration.
 
 ## Frontend ↔ n8n endpoint mapping
 
